@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # file = open("test.txt","w")
 # file.write("testing!")
 # file.close()
@@ -34,11 +36,11 @@
 import glob
 import os
 
-gzlist = glob.glob("*.txt")
+rawlist = glob.glob("*.txt")
 
-print gzlist
+print rawlist
 
-for file in gzlist:
+for file in rawlist:
     filename = os.path.splitext(file)[0]
     newname = filename + ".zip"
     os.rename(file, newname)
